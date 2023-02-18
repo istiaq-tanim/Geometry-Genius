@@ -124,3 +124,19 @@ document.getElementById("rhombus-calculation").addEventListener("click",function
  
     displayTable(serial,name, pentagonArea);
  })
+
+//  Card Random Background
+let cards = document.getElementsByClassName("card");
+
+for (item of cards) {
+    item.addEventListener("mouseenter", function (event) {
+        let red = Math.round(Math.random() * 255);
+        let green = Math.round(Math.random() * 255);
+        let blue = Math.round(Math.random() * 255);
+        event.target.style.backgroundColor = `rgb(${red},${green},${blue})`
+    })
+    item.addEventListener("mouseleave", function (event) {
+        event.target.style.backgroundColor = "white"
+    })
+
+}
