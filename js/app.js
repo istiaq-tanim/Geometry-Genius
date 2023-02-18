@@ -21,7 +21,7 @@ function displayTable(serial,name, area) {
         <td>${serial}</td>
         <td>${name}</td>
         <td>${area}</td>
-        <td><button class="bg-sky-500 text-white px-2 py-2 font-medium rounded-lg">Convert to m<sup>2</sup> </button></td>
+        <td><button class="bg-sky-400 hover:bg-sky-600 text-white px-2 py-2 font-medium rounded-lg">Convert to m<sup>2</sup> </button></td>
         `
     container.appendChild(createRow);
 }
