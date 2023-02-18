@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-5xl text-center mt-10">Welcome To <span class="text-indigo-400">My Blog</span></h1>
+    </header>
+    <section>
+        <div class="flex mt-10 justify-center gap-5">
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card-body items-center text-center bg-teal-400 rounded-lg">
+                    <h2 class="card-title text-xl">What is DOM and what is the purpose of DOM?</h2>
+                    <p class="text-lg text-justify mt-3">DOM is Document Object Model, which is a programming interface for HTML and XML. DOM represents
+                        our homepage as if we can easily modify our homepage by using programing language.
+                        We use DOM for user Interactivity. By using DOM we easily create new elements, modify elements
+                        and delete elements.</p>
+                </div>
+            </div>
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card-body items-center text-center bg-rose-400 rounded-lg ">
+                    <h2 class="card-title text-xl">How will you select HTML elements using DOM? Name the DOM methods.
+                    </h2>
+                    <p class="text-lg text-justify mt-3">We can select HTML elements by using their class name,id name and tagname.There are five ways we can select HTML elements by using DOM.
+                        <ul class="list-decimal text-lg text-left">
+                            <li>getElementsByTagName()</li>
+                            <li>getElementsByClassName()</li>
+                            <li>getElementById()</li>
+                            <li>querySelector()</li>
+                            <li>querySelectorAll()</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card-body items-center text-center bg-red-300 rounded-lg">
+                    <h2 class="card-title text-xl">What is event bubble??</h2>
+                    <p class="text-lg text-justify mt-3"> Event Bubbling is a concept of DOM (Document Object Model).In event Bubbling there are two process first process when any of the event triggered. First of all window object capture the lowest event. Then it search there have any kind of event trigger on it's parent elements.In this way it check lower to upward like bubble of water.Which is event Bubbling.</p>
+                </div>
+            </div>
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card-body items-center text-center bg-sky-300 rounded-lg">
+                    <h2 class="card-title text-xl">What is a callback function and why will you use it?</h2>
+                    <p class="text-lg text-justify mt-3">Callback function is function which sent a function to another function as an arguments.It also allows a function to call another function.Callback function can run after another function has executed.</p>
+                </div>
+            </div>
+            
+
+
+        </div>
+    </section>
+</body>
+
+</html>
