@@ -80,6 +80,7 @@ document.getElementById("parallelogram-calculation").addEventListener("click",fu
    displayTable(name, parallelogramArea);
 })
 
+// rhombus
 document.getElementById("rhombus-calculation").addEventListener("click",function(){
     
     const d1= getElementValue("rhombus-d1");
@@ -92,6 +93,7 @@ document.getElementById("rhombus-calculation").addEventListener("click",function
     displayTable(name, rhombusArea);
  })
 
+ //pentagon
  document.getElementById("pentagon-calculation").addEventListener("click",function(){
     
     const part= getElementValue("pentagon-part");
@@ -103,7 +105,7 @@ document.getElementById("rhombus-calculation").addEventListener("click",function
  
     displayTable(name, pentagonArea);
  })
-
+// ellipse
  document.getElementById("ellipse-calculation").addEventListener("click",function(){
     
     const a= getElementValue("ellipse-a");
