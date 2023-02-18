@@ -50,7 +50,7 @@ document.getElementById("rectangle-calculation").addEventListener("click", funct
         displayTable(name, rectangleArea);
     }
 })
-// paparallelogram
+// parallelogram
 document.getElementById("parallelogram-calculation").addEventListener("click",function(){
     
    const base= getElementValue("parallelogram-base");
@@ -62,3 +62,15 @@ document.getElementById("parallelogram-calculation").addEventListener("click",fu
 
    displayTable(name, parallelogramArea);
 })
+
+document.getElementById("rhombus-calculation").addEventListener("click",function(){
+    
+    const d1= getElementValue("rhombus-d1");
+    const d2=getElementValue("rhombus-d2")
+ 
+    const name= getElementValue("rhombus-name");
+ 
+    const rhombusArea=0.5*parseInt(d1)*parseInt(d2);
+ 
+    displayTable(name, rhombusArea);
+ })
