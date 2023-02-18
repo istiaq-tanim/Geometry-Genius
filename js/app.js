@@ -1,4 +1,6 @@
 // get inputField Value
+
+let serial=0;
 function getInputFieldValue(id) {
     const inputField = document.getElementById(id);
     const value = parseFloat(inputField.value);
@@ -12,19 +14,20 @@ function getElementValue(id) {
 }
 
 // display in table
-function displayTable(name, area) {
+function displayTable(serial,name, area) {
     const container = document.getElementById("parent-container");
     const createRow = document.createElement("tr");
     createRow.innerHTML = `
-        <td>${1}</td>
+        <td>${serial}</td>
         <td>${name}</td>
         <td>${area}</td>
-        <td><button class="bg-sky-500 text-white px-3 py-2 font-medium rounded-lg">Convert to m<sup>2</sup> </button></td>
+        <td><button class="bg-sky-500 text-white px-2 py-2 font-medium rounded-lg">Convert to m<sup>2</sup> </button></td>
         `
     container.appendChild(createRow);
 }
 // Triangle
 document.getElementById("triangle-calculation").addEventListener("click", function () {
+    
     const base = getInputFieldValue("triangle-base");
     const height = getInputFieldValue("triangle-height");
     const name = getElementValue("triangle-name");
@@ -36,17 +39,19 @@ document.getElementById("triangle-calculation").addEventListener("click", functi
          let triangleArea = 0.5 * height * base;
          if(Number.isInteger(triangleArea))
          {
-             displayTable(name, triangleArea);
+             serial++;
+             displayTable(serial, name, triangleArea);
          }
          else
-         {
+         {   serial++;
              triangleArea=triangleArea.toFixed(2);
-             displayTable(name, triangleArea);
+             displayTable(serial, name, triangleArea);
          }
     }
 })
 // Rectangle
 document.getElementById("rectangle-calculation").addEventListener("click", function () {
+    
     const width = getInputFieldValue("rectangle-width");
     const height = getInputFieldValue("rectangle-height");
     const name = getElementValue("rectangle-name");
@@ -56,20 +61,22 @@ document.getElementById("rectangle-calculation").addEventListener("click", funct
     else {
         let rectangleArea = height * width;
         if(Number.isInteger(rectangleArea))
-        {
-            displayTable(name, rectangleArea);
+        {   
+            serial++;
+            displayTable(serial, name, rectangleArea);
         }
         else
         {
+            serial++;
             rectangleArea=rectangleArea.toFixed(2);
-            displayTable(name, rectangleArea);
+            displayTable(serial,name, rectangleArea);
         }
        
     }
 })
 // parallelogram
 document.getElementById("parallelogram-calculation").addEventListener("click",function(){
-    
+    serial++;
    const base= getElementValue("parallelogram-base");
    const height=getElementValue("parallelogram-height")
 
@@ -77,12 +84,12 @@ document.getElementById("parallelogram-calculation").addEventListener("click",fu
 
    const parallelogramArea=parseInt(base)*parseInt(height);
 
-   displayTable(name, parallelogramArea);
+   displayTable(serial,name, parallelogramArea);
 })
 
 // rhombus
 document.getElementById("rhombus-calculation").addEventListener("click",function(){
-    
+    serial++;
     const d1= getElementValue("rhombus-d1");
     const d2=getElementValue("rhombus-d2")
  
@@ -90,12 +97,12 @@ document.getElementById("rhombus-calculation").addEventListener("click",function
  
     const rhombusArea=0.5*parseInt(d1)*parseInt(d2);
  
-    displayTable(name, rhombusArea);
+    displayTable(serial,name, rhombusArea);
  })
 
  //pentagon
  document.getElementById("pentagon-calculation").addEventListener("click",function(){
-    
+    serial++;
     const part= getElementValue("pentagon-part");
     const base=getElementValue("pentagon-base")
  
@@ -103,11 +110,11 @@ document.getElementById("rhombus-calculation").addEventListener("click",function
  
     const pentagonArea=0.5*parseInt(part)*parseInt(base);
  
-    displayTable(name, pentagonArea);
+    displayTable(serial,name, pentagonArea);
  })
 // ellipse
  document.getElementById("ellipse-calculation").addEventListener("click",function(){
-    
+    serial++;
     const a= getElementValue("ellipse-a");
     const b=getElementValue("ellipse-b")
  
@@ -115,5 +122,5 @@ document.getElementById("rhombus-calculation").addEventListener("click",function
  
     const pentagonArea=(3.14*parseInt(a)*parseInt(b)).toFixed(2);
  
-    displayTable(name, pentagonArea);
+    displayTable(serial,name, pentagonArea);
  })
