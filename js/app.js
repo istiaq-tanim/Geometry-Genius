@@ -10,6 +10,7 @@ function getElementValue(id) {
     const text = document.getElementById(id).innerText;
     return text;
 }
+
 // display in table
 function displayTable(name, area) {
     const container = document.getElementById("parent-container");
@@ -33,7 +34,7 @@ document.getElementById("triangle-calculation").addEventListener("click", functi
     }
     else {
          const triangleArea = 0.5 * height * base;
-        displayTable(name, triangleArea);
+         displayTable(name, triangleArea);
     }
 })
 // Rectangle
@@ -48,4 +49,16 @@ document.getElementById("rectangle-calculation").addEventListener("click", funct
         const rectangleArea = height * width;
         displayTable(name, rectangleArea);
     }
+})
+// paparallelogram
+document.getElementById("parallelogram-calculation").addEventListener("click",function(){
+    
+   const base= getElementValue("parallelogram-base");
+   const height=getElementValue("parallelogram-height")
+
+   const name= getElementValue("parallelogram-name");
+
+   const parallelogramArea=parseInt(base)*parseInt(height);
+
+   displayTable(name, parallelogramArea);
 })
