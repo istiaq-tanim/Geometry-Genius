@@ -33,8 +33,16 @@ document.getElementById("triangle-calculation").addEventListener("click", functi
         alert("Give Valid Width and Height");
     }
     else {
-         const triangleArea = 0.5 * height * base;
-         displayTable(name, triangleArea);
+         let triangleArea = 0.5 * height * base;
+         if(Number.isInteger(triangleArea))
+         {
+             displayTable(name, triangleArea);
+         }
+         else
+         {
+             triangleArea=triangleArea.toFixed(2);
+             displayTable(name, triangleArea);
+         }
     }
 })
 // Rectangle
@@ -46,8 +54,17 @@ document.getElementById("rectangle-calculation").addEventListener("click", funct
         alert("Give Valid Width and Height");
     }
     else {
-        const rectangleArea = height * width;
-        displayTable(name, rectangleArea);
+        let rectangleArea = height * width;
+        if(Number.isInteger(rectangleArea))
+        {
+            displayTable(name, rectangleArea);
+        }
+        else
+        {
+            rectangleArea=rectangleArea.toFixed(2);
+            displayTable(name, rectangleArea);
+        }
+       
     }
 })
 // parallelogram
@@ -73,4 +90,28 @@ document.getElementById("rhombus-calculation").addEventListener("click",function
     const rhombusArea=0.5*parseInt(d1)*parseInt(d2);
  
     displayTable(name, rhombusArea);
+ })
+
+ document.getElementById("pentagon-calculation").addEventListener("click",function(){
+    
+    const part= getElementValue("pentagon-part");
+    const base=getElementValue("pentagon-base")
+ 
+    const name= getElementValue("pentagon-name");
+ 
+    const pentagonArea=0.5*parseInt(part)*parseInt(base);
+ 
+    displayTable(name, pentagonArea);
+ })
+
+ document.getElementById("ellipse-calculation").addEventListener("click",function(){
+    
+    const a= getElementValue("ellipse-a");
+    const b=getElementValue("ellipse-b")
+ 
+    const name= getElementValue("ellipse-name");
+ 
+    const pentagonArea=(3.14*parseInt(a)*parseInt(b)).toFixed(2);
+ 
+    displayTable(name, pentagonArea);
  })
